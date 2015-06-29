@@ -9,10 +9,10 @@ from Plugins.Plugin import PluginDescriptor
 
 from enigma import setAnimation_current, setAnimation_speed
 
-# default = simple fade
+# default = slide drop
 g_default = {
-        "current": 1,
-        "speed"  : 20,
+        "current": 5,
+        "speed"  : 5,
 }
 g_max_speed = 30
 
