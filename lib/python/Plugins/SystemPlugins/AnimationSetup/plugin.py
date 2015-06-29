@@ -9,9 +9,9 @@ from Plugins.Plugin import PluginDescriptor
 
 from enigma import setAnimation_current, setAnimation_speed
 
-# default = slide to left
+# default = simple fade
 g_default = {
-        "current": 0,
+        "current": 1,
         "speed"  : 20,
 }
 g_max_speed = 30
@@ -214,7 +214,7 @@ def animationSetupMain(session, **kwargs):
 	session.open(AnimationSetupScreen)
 
 def startAnimationSetup(menuid):
-	if menuid != "osd_menu":
+	if menuid != "system":
 		return []
 
 	return [( _("Animations"), animationSetupMain, "animation_setup", None)]
